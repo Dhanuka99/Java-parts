@@ -1,0 +1,718 @@
+Q1
+class Example{ 
+	public static void main(String args[]){ 
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+		//
+		//
+		//
+		
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+		
+		
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+		
+		
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q2
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printAddress(){
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+	}
+	//-------------End Method declaration----------------
+	public static void main(String args[]){ 
+		printAddress(); //Method calling statement
+		//
+		//
+		//
+		//
+		printAddress(); //Method calling statement
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q3
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printAddress(){
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+	}
+	//-------------End Method declaration----------------
+	
+	//---------------------------------------------------
+	public static void printCustomerDetails(){
+		System.out.println("printCustomerDetails"); 
+	}
+	//---------------------------------------------------
+	public static void main(String args[]){ 
+		printAddress(); //Method calling statement
+		printCustomerDetails();
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q4
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printAddress(){
+		System.out.println("Niroth Samarawickrama,");
+		System.out.println("No 223A,");
+		System.out.println("Galle rd,");
+		System.out.println("panadura.");
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printAddress();
+		printAddress();
+		printAddress();
+		printAddress();
+		
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q5
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printTotal(){
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input number 1 : ");
+		int num1=input.nextInt();
+		System.out.print("Input number 2 : ");
+		int num2=input.nextInt();
+		
+		int total=num1+num2;
+		
+		System.out.println(num1+" + "+num2+" = "+total);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printTotal();
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q6
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printStudentStatus(){
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input student average marks : ");
+		double avg=input.nextDouble();
+		System.out.println(avg>=50 ? "Pass":"Fail");
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printStudentStatus();	
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q7
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printStudentStatus(){
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input student average marks : ");
+		double avg=input.nextDouble();
+		
+		//System.out.println(avg>=50 ? "Pass":"Fail");
+		
+		/*
+		String status;
+		if(avg>=50){
+			status="Pass";
+		}else{
+			status="Fail";
+		}
+		System.out.println(status);
+		*/
+		
+		/*
+		String status=avg>=50 ? "Pass":"Fail";
+		System.out.println(status);
+		*/
+		
+		if(avg>=50){
+			System.out.println("Pass");
+		}else{
+			System.out.println("Fail");
+		}
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printStudentStatus();	
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q8
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printAbsoluteNumber(){
+		Random r=new Random();
+		int num=r.nextInt();
+		System.out.println(num<0 ? -num : num);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printAbsoluteNumber();
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q9
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printNoOfDigits(){
+		Scanner input=new Scanner(System.in);
+		int num=input.nextInt();
+		int count=0;
+		do{
+			count++;
+		}while((num/=10)!=0);
+		System.out.println(count);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printNoOfDigits();
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q10
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printFact(){
+		Scanner input=new Scanner(System.in);
+		int num=input.nextInt();
+		int fact=1;
+		while(num>0){
+			System.out.print(num+" x ");
+			fact*=num--;
+		}
+		System.out.println("\b\b : "+fact);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printFact();
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+	Parameterized methods
+//////////////////////////////////////////////////////////////////////////////
+Q11 Fropm Q5
+============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printTotal(int a, int b){ //a, b method parameters
+		int tot=a+b;
+		System.out.println(a+" + "+b+" = "+tot);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input number 1 : ");
+		int num1=input.nextInt();
+		System.out.print("Input number 2 : ");
+		int num2=input.nextInt();
+		
+		printTotal(num1,num2); //Calling parameterized method, num1, num2 are method arguments
+		
+		printTotal(10,20);		
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q12 From Q6
+===========
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printStudentStatus(double avg){
+		System.out.println(avg>=50 ? "Pass":"Fail");
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input student average marks : ");
+		double avg=input.nextDouble();
+		
+		printStudentStatus(avg); 
+		printStudentStatus(49); 
+		printStudentStatus(51); 
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q13 From Q9
+===========
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printNoOfDigits(int num){
+		int count=0;
+		do{
+			count++;
+		}while((num/=10)!=0);
+		System.out.println(count);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		int num=input.nextInt();
+		printNoOfDigits(num);
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q14 From Q8
+===========
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printAbsoluteNumber(int num){
+		System.out.println(num<0 ? -num : num);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printAbsoluteNumber(-10);
+		printAbsoluteNumber(10);
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q15
+
+//////////////////////////////////////////////////////////////////////////////
+Q16 From Q10
+============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printFact(int num){
+		int fact=1;
+		while(num>0){
+			System.out.print(num+" x ");
+			fact*=num--;
+		}
+		System.out.println("\b\b : "+fact);
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		printFact(5);
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q17 From Q7
+===========
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static void printStudentStatus(double avg){
+		System.out.println(avg>=50 ? "Pass":"Fail");
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		
+		printStudentStatus(50);	
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+	Return typed methods
+//////////////////////////////////////////////////////////////////////////////
+Q18 Exercise 1
+==============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static int getTotal(int a, int b){ //a, b method parameters
+		int tot=a+b;
+		//System.out.println(a+" + "+b+" = "+tot);
+		return tot;
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input number 1 : ");
+		int num1=input.nextInt();
+		System.out.print("Input number 2 : ");
+		int num2=input.nextInt();
+		
+		int total;
+		total=getTotal(num1,num2);
+		System.out.println("my total : "+total);
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q19 Exercise 2
+============== 
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input an integer : ");
+		int num=input.nextInt();
+		
+		int count;
+		count=findDigitsCount(num);
+		System.out.println("No of digits for "+num+" : "+count);
+	} 
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q20 From Q19
+============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static int findDigitsCount(int num){
+		int count=0;
+		do{
+			count++;
+		}while((num/=10)!=0);
+		return count;
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		System.out.print("Input an integer : ");
+		int num=input.nextInt();
+		
+		int count;
+		count=findDigitsCount(num);
+		System.out.println("No of digits for "+num+" : "+count);
+	} 
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q21 Exercise 3
+==============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		for (int i = 0; i < 10; i++){
+			System.out.println(i+" ! : "+fact(i));
+		}
+	} 
+}
+//0! : 1
+//1! : 1
+//2! : 2
+//3! : 6
+//4! : 24
+//5! : 120
+//6! : 720
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q22 From Q21
+============
+import java.util.*;
+class Example{ 
+	//-------------Start Method declaration----------------
+	public static int fact(int num){
+		int f=1;
+		while(num>0){
+			f*=num--;
+		}
+		return f;
+	}
+	//-------------End Method declaration----------------
+
+	public static void main(String args[]){ 
+		for (int i = 0; i < 10; i++){
+			System.out.println(i+" ! : "+fact(i));
+		}
+	} 
+}
+//0! : 1
+//1! : 1
+//2! : 2
+//3! : 6
+//4! : 24
+//5! : 120
+//6! : 720
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q23 Exercise 4
+==============
+import java.util.*;
+class Example{ 
+	public static void main(String args[]){ 
+		Random r=new Random();
+		for (int i = 0; i < 10; i++){
+			int rand=r.nextInt();
+			int a=abs(rand);
+			System.out.println("Absolut value of "+rand+" : "+a);
+		}
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q24 From Q23
+============
+import java.util.*;
+class Example{ 
+	public static int abs(int num){
+		return num<0 ? -num: num; //1
+		/*
+		int a=num<0 ? -num: num;
+		return a;
+		*/
+		
+		/*
+		int a;
+		if(num<0){
+			a=-num;
+		}else{
+			a=num;
+		}
+		return a;
+		*/
+		
+		/*
+		if(num<0){
+			return -num;
+		}else{
+			return num;
+		}
+		*/
+		
+		/*
+		if(num<0){
+			return -num;
+		}
+		return num;
+		*/
+	}
+	public static void main(String args[]){ 
+		Random r=new Random();
+		for (int i = 0; i < 10; i++){
+			int rand=r.nextInt();
+			int a=abs(rand);
+			System.out.println("Absolut value of "+rand+" : "+a);
+		}
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q25 Exercise 5
+==============
+import java.util.*;
+class Example{ 
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Input an integer : ");
+		int num=input.nextInt();
+		
+		System.out.println("Reverse number of "+num+" : "+reverse(num));
+	} 
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q26 From Q25
+============
+import java.util.*;
+class Example{ 
+	public static int reverse(int num){
+		int rev=0;
+		while(num!=0){
+			rev*=10;
+			rev+=num%10;
+			num/=10;
+		}
+		return rev;
+	}
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Input an integer : ");
+		int num=input.nextInt();
+		
+		System.out.println("Reverse number of "+num+" : "+reverse(num));
+	} 
+}
+
+
+//////////////////////////////////////////////////////////////////////////////
+Q27 Exercise 6
+==============
+import java.util.*;
+class Example{ 
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Input average marks : ");
+		double avg=input.nextDouble();
+		
+		char grade=findStudentGrade(avg);
+		System.out.println(avg+" : "+grade);
+	} 
+}
+
+//avg>=75 --A
+//avg>=65 --B
+//avg>=45 --C
+//avg>=25 --D
+//else E
+
+//////////////////////////////////////////////////////////////////////////////
+Q28 From Q27
+============
+import java.util.*;
+class Example{ 
+	public static char findStudentGrade(double avg){
+		char g=avg>=75 ? 'A':avg>=65 ? 'B':avg>=45 ? 'C':avg>=25 ? 'D':'E';
+		return g;
+	}
+	public static void main(String args[]){ 
+		Scanner input=new Scanner(System.in);
+		
+		System.out.print("Input average marks : ");
+		double avg=input.nextDouble();
+		
+		char grade=findStudentGrade(avg);
+		System.out.println(avg+" : "+grade);
+	} 
+}
+
+//avg>=75 --A
+//avg>=65 --B
+//avg>=45 --C
+//avg>=25 --D
+//else E
+
+//////////////////////////////////////////////////////////////////////////////
+Q29 Exercise 7
+==============
+import java.util.*;
+class Example{ 
+	public static void main(String args[]){ 
+		Random r=new Random();
+		for (int i = 0; i < 1000; i++){
+			if(isPalindrome(i)){
+				System.out.println(i);
+			}
+		}
+			
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////
+Q30
+import java.util.*;
+class Example{ 
+	public static boolean isPalindrome(int num){
+		int rev=0;
+		int temp=num;
+		while(temp!=0){
+			rev*=10;
+			rev+=temp%10;
+			temp/=10;
+		}
+		/*
+		if(rev==num){
+			return true;
+		}else{
+			return false;
+		}
+		*/
+		//return rev==num ? true:false;
+		return rev==num;
+	}
+	public static void main(String args[]){ 
+		for (int i = 0; i < 1000; i++){
+			if(isPalindrome(i)){
+				System.out.println(i);
+			}
+		}
+			
+	} 
+}
+
+//----------------------------------------------------------------------
+import java.util.*;
+class Example{ 
+	public static int reverse(int num){
+		int rev=0;
+		while(num!=0){
+			rev*=10;
+			rev+=num%10;
+			num/=10;
+		}
+		return rev;
+	}
+	public static boolean isPalindrome(int num){
+		return reverse(num)==num;
+	}
+	public static void main(String args[]){ 
+		for (int i = 0; i < 1000; i++){
+			if(isPalindrome(i)){
+				System.out.println(i);
+			}
+		}
+			
+	} 
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+Q31
+
+
